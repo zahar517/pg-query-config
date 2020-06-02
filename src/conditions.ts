@@ -7,7 +7,6 @@ const createCondition = (object: Record<string, any>): Map<string, number | stri
         if (Array.isArray(object[prop])) {
             conditionMap.set(prop, In(object[prop]));
         } else if (typeof object[prop] === 'object') {
-            console.log(prop, typeof object[prop]);
             createJsonCondition(wrap(prop), object[prop], conditionMap);
         } else if (object[prop]) {
             conditionMap.set(prop, object[prop]);

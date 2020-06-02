@@ -1,10 +1,9 @@
-import { QueryConfig as IQueryConfig } from 'pg';
 import { QueryParams, WhereCondition, OrderCondition } from './types';
 import { createCondition } from './conditions';
 import { addValueToReferenceSet } from './utils';
 import { wrap } from './wrappers';
 
-export class QueryConfig<T extends { [key in string]: any }> implements IQueryConfig {
+export class QueryConfig<T extends { [key in string]: any }> {
     private readonly schema?: string;
     private readonly table: string;
     protected sqlCommand: string;
