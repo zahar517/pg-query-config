@@ -1,2 +1,2 @@
-# pg-qb
+# pg-query-config
 Query Builder for PostgreSQL
